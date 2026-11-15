@@ -1,0 +1,123 @@
+.dicon {
+  position: absolute;
+  z-index: 2;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: default;
+  -webkit-tap-highlight-color: transparent;
+}
+.dicon:focus-visible {
+  outline: 1px dotted #fff;
+  outline-offset: 2px;
+}
+.dicon__icon {
+  position: absolute;
+  display: block;
+}
+.dicon__label {
+  position: absolute;
+  left: 0;
+  right: 0;
+  display: block;
+  font-family: var(--font-pixel);
+  font-size: 13px;
+  line-height: 1.037;
+  letter-spacing: 0.65px;
+  text-align: center;
+  color: #fff;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.62);
+}
+.dicon__label > * {
+  pointer-events: none;
+}
+.dicon:hover .dicon__icon {
+  filter: brightness(1.08);
+}
+.dicon.is-selected .dicon__icon {
+  filter: brightness(0.8) sepia(1) hue-rotate(180deg) saturate(2.4);
+}
+.dicon.is-selected .dicon__label {
+  background: rgba(49, 106, 197, 0.85);
+  text-shadow: none;
+}
+
+/* Átomo / carpeta: 64 × 49 con el SVG desbordando según el diseño */
+.atom-carpeta {
+  position: absolute;
+  inset: 0;
+}
+.atom-carpeta img {
+  position: absolute;
+  left: -2px;
+  top: -1px;
+  width: 72px;
+  height: 57px;
+  max-width: none;
+}
+
+/* Átomo / ícono archivo 427 */
+.atom-427 {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+.atom-427__doc {
+  position: absolute;
+  left: 1.47px;
+  top: 2.47px;
+  width: 58.48px;
+  height: 68.6px;
+  max-width: none;
+}
+.atom-427__skull {
+  position: absolute;
+  left: 12px;
+  top: 52px;
+  width: 16px;
+  height: 16px;
+}
+
+/* Átomo / Icono PDF (64 × 64) */
+.atom-pdf {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+.atom-pdf__full {
+  position: absolute;
+  inset: 7.14% 14.28% 7.14% 14.29%;
+  width: 71.43%;
+  height: 85.72%;
+}
+.atom-pdf__fold {
+  position: absolute;
+  left: 53.59%;
+  top: 7.14%;
+  width: 32.14%;
+  height: 32.15%;
+}
+.atom-pdf__line {
+  position: absolute;
+  left: 21.06%;
+  width: 56.58%;
+  height: 2px;
+  margin-top: -1px;
+}
+.atom-pdf__line--short {
+  top: 80.26%;
+  left: 22.38%;
+  width: 17.1%;
+}
+.atom-pdf__ext {
+  position: absolute;
+  left: 40.8%;
+  right: 22.36%;
+  top: 71.05%;
+  font-family: var(--font-pixel);
+  font-size: 11px;
+  line-height: 1.037;
+  letter-spacing: 0.55px;
+  text-align: center;
+  color: #fff;
+}

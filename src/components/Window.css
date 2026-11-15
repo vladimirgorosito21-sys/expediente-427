@@ -1,0 +1,165 @@
+.win {
+  position: absolute;
+  background: var(--paper);
+  animation: win-open 0.16s ease-out;
+}
+@keyframes win-open {
+  from { opacity: 0; transform: scale(0.96); }
+  to { opacity: 1; transform: none; }
+}
+
+/* ---------- Carpeta (barra dorada) ---------- */
+.win--folder {
+  border-radius: 20px 20px 0 0;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+}
+.win__titlebar {
+  position: relative;
+  flex: 0 0 36px;
+  height: 36px;
+  border-radius: 20px 20px 0 0;
+  background: url('../assets/ui/titlebar.png') center / cover, var(--gold);
+  box-shadow:
+    inset 5px 5px 1px #beb5a1,
+    0 6px 15.5px rgba(0, 0, 0, 0.13);
+  display: flex;
+  align-items: center;
+  padding: 0 22px 0 31px;
+  cursor: grab;
+  touch-action: none;
+  user-select: none;
+}
+.win__titlebar:active {
+  cursor: grabbing;
+}
+.win__icon {
+  width: 19px;
+  height: 14px;
+}
+.win__title {
+  margin: 0 0 0 12px;
+  flex: 1;
+  font-family: var(--font-pixel);
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.037;
+  letter-spacing: 1.2px;
+  color: var(--gold-dark);
+}
+
+/* Botón X dorado (Átomo / botón X) */
+.x-gold {
+  position: relative;
+  width: 28px;
+  height: 25px;
+  border: 0;
+  padding: 0;
+  background: var(--gold);
+  box-shadow:
+    inset -3px -2px 0 rgba(0, 0, 0, 0.25),
+    inset 3px 3px 0 var(--gold-light),
+    0 6px 10px rgba(0, 0, 0, 0.09);
+  font-family: var(--font-play);
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 1;
+  letter-spacing: 1.05px;
+  color: var(--gold-ink);
+}
+.x-gold:hover {
+  filter: brightness(1.06);
+}
+.x-gold:active {
+  box-shadow:
+    inset 3px 2px 0 rgba(0, 0, 0, 0.25),
+    inset -3px -3px 0 var(--gold-light);
+}
+.x-gold:focus-visible,
+.x-gray:focus-visible {
+  outline: 1px dotted #000;
+  outline-offset: 2px;
+}
+
+.win--folder .win__body {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+}
+
+/* ---------- Documento (hoja gris) ---------- */
+.win--doc {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+}
+.win--doc .win__body {
+  position: absolute;
+  inset: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  scrollbar-color: #a7a7a7 #cfcfcf;
+}
+.x-gray {
+  position: absolute;
+  z-index: 2;
+  top: 11px;
+  right: 12px;
+  width: 35px;
+  height: 32px;
+  border: 0;
+  padding: 0;
+  background: var(--paper);
+  box-shadow: 2px 2px 0.7px rgba(0, 0, 0, 0.25);
+  display: grid;
+  place-items: center;
+}
+.x-gray img {
+  width: 18.4229px;
+  height: 18.5938px;
+}
+.x-gray:hover {
+  background: #cfcfcf;
+}
+
+/* Tipografía compartida de los documentos (manual, informe, expediente) */
+.doc {
+  position: relative;
+  color: var(--ink);
+  font-family: var(--font-sans);
+}
+.doc__title {
+  margin: 0;
+  font-weight: 700;
+  font-size: 35px;
+  text-align: center;
+  color: var(--ink);
+}
+.doc__subtitle {
+  margin: 0;
+  font-size: 22px;
+  text-align: center;
+}
+.doc__bar {
+  height: 10px;
+  background: var(--field);
+}
+.doc__h {
+  margin: 0;
+  font-weight: 700;
+  font-size: 26px;
+  color: var(--ink);
+}
+.doc__h .num {
+  display: inline-block;
+  width: 39px;
+  margin-left: 0;
+}
+.doc__rule {
+  height: 2px;
+  background: var(--rule);
+}
+.doc p {
+  margin: 0;
+  font-size: 22px;
+  line-height: normal;
+}

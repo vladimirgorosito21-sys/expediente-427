@@ -1,0 +1,103 @@
+:root {
+  /* Tokens tomados del Figma (frames Desktop 1-7 y "Atomic") */
+  --gold: #e2bc69;
+  --gold-light: #f3e2bf;
+  --gold-dark: #96701d;
+  --gold-ink: rgba(107, 80, 21, 0.46);
+  --paper: #d9d9d9;
+  --paper-dark: #bfbfbf;
+  --field: #a7a7a7;
+  --field-dark: #919191;
+  --rule: #888888;
+  --ink: #4a4a4a;
+  --ink-strong: #2d2d2d;
+  --taskbar: #ababab;
+  --clue-green: #13562f;
+  --player-shell: #a4d2fb;
+  --player-screen: #b3c8db;
+  --yellow-note: #ffc973;
+
+  --font-pixel: 'Pixelify Sans', 'Courier New', monospace;
+  --font-sans: Helvetica, Arial, 'Liberation Sans', sans-serif;
+  --font-hand: 'Gochi Hand', 'Comic Sans MS', cursive;
+  --font-play: 'Play', var(--font-sans);
+
+  color-scheme: light;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  height: 100%;
+}
+
+body {
+  background: #05070d;
+  color: var(--ink);
+  font-family: var(--font-sans);
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
+img {
+  display: block;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+/* Botón estilo Wingows (bisel clásico) */
+.w-btn {
+  background: #d4d0c8;
+  border: 0;
+  padding: 6px 16px;
+  font-family: var(--font-pixel);
+  font-size: 15px;
+  color: #1d1d1d;
+  box-shadow:
+    inset -2px -2px 0 #808080,
+    inset 2px 2px 0 #ffffff,
+    inset -3px -3px 0 #404040;
+}
+.w-btn:active {
+  box-shadow:
+    inset 2px 2px 0 #808080,
+    inset -2px -2px 0 #ffffff;
+}
+.w-btn:focus-visible {
+  outline: 1px dotted #000;
+  outline-offset: -5px;
+}
+
+.clue {
+  color: var(--clue-green);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}

@@ -1,0 +1,200 @@
+.boot {
+  position: absolute;
+  inset: 0;
+  z-index: 20000;
+  background: #000;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-pixel);
+}
+.boot__logo {
+  width: 120px;
+  height: 120px;
+  animation: boot-pop 0.8s ease-out;
+}
+@keyframes boot-pop {
+  from { opacity: 0; transform: scale(0.85); }
+}
+.boot__brand {
+  margin: 18px 0 0;
+  font-size: 64px;
+  font-weight: 600;
+  letter-spacing: 4px;
+}
+.boot__brand sup {
+  font-size: 22px;
+}
+.boot__edition {
+  margin: 4px 0 60px;
+  font-size: 22px;
+  color: var(--gold);
+  letter-spacing: 2px;
+}
+.boot__bar {
+  position: relative;
+  width: 240px;
+  height: 22px;
+  border: 2px solid #8a8a8a;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.boot__bar span {
+  position: absolute;
+  top: 3px;
+  width: 14px;
+  height: 12px;
+  background: linear-gradient(180deg, #f3e2bf, #96701d);
+  animation: boot-run 1.6s linear infinite;
+}
+.boot__bar span:nth-child(2) { animation-delay: 0.12s; }
+.boot__bar span:nth-child(3) { animation-delay: 0.24s; }
+@keyframes boot-run {
+  from { left: -50px; }
+  to { left: 250px; }
+}
+.boot__skip {
+  position: absolute;
+  right: 40px;
+  bottom: 36px;
+  background: none;
+  border: 1px solid #555;
+  color: #aaa;
+  padding: 6px 16px;
+  font-family: var(--font-pixel);
+  font-size: 16px;
+}
+
+.boot--quote {
+  padding: 0 220px;
+}
+.boot__quote {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-style: italic;
+  font-size: 38px;
+  line-height: 1.45;
+  text-align: center;
+  min-height: 220px;
+}
+.boot__next {
+  margin-top: 60px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s;
+}
+.boot__next.is-visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Pantalla de inicio de sesión: estilo Wingows con la paleta dorada del diseño */
+.login {
+  position: absolute;
+  inset: 0;
+  z-index: 20000;
+  display: flex;
+  flex-direction: column;
+  background: #4a74c4;
+  font-family: var(--font-pixel);
+  color: #fff;
+}
+.login__top,
+.login__bottom {
+  flex: 0 0 110px;
+  background: #1f3f8a;
+}
+.login__top {
+  border-bottom: 3px solid var(--gold);
+}
+.login__bottom {
+  border-top: 3px solid var(--gold);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 20px;
+  padding: 0 60px;
+  font-size: 17px;
+  color: #d7e2ff;
+}
+.login__body {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  background: radial-gradient(ellipse at 30% 40%, #7aa2e8 0%, #4a74c4 55%, #3a62b0 100%);
+}
+.login__left {
+  flex: 1;
+  padding: 0 70px 0 160px;
+  text-align: right;
+}
+.login__logo {
+  width: 96px;
+  height: 96px;
+  margin-left: auto;
+}
+.login__left h1 {
+  margin: 8px 0 18px;
+  font-size: 56px;
+  font-weight: 600;
+  letter-spacing: 3px;
+}
+.login__left p {
+  margin: 0 0 14px;
+  font-size: 20px;
+}
+.login__about {
+  margin-top: 36px !important;
+  margin-left: auto !important;
+  max-width: 470px;
+  font-family: var(--font-sans);
+  font-size: 17px !important;
+  line-height: 1.45;
+  color: #e6edff;
+}
+.login__divider {
+  width: 2px;
+  height: 440px;
+  background: linear-gradient(180deg, transparent, rgba(255, 255, 255, 0.7), transparent);
+}
+.login__right {
+  flex: 1;
+  padding: 0 60px;
+}
+.login__user {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  padding: 14px 26px 14px 14px;
+  border: 0;
+  border-radius: 10px;
+  background: transparent;
+  color: #fff;
+  text-align: left;
+  transition: background 0.15s;
+}
+.login__user:hover,
+.login__user:focus-visible {
+  background: rgba(16, 40, 110, 0.55);
+  outline: none;
+}
+.login__user img {
+  width: 96px;
+  height: 96px;
+  border: 3px solid var(--gold);
+  border-radius: 6px;
+  object-fit: cover;
+}
+.login__user strong {
+  display: block;
+  font-size: 30px;
+  font-weight: 600;
+}
+.login__user small {
+  display: block;
+  margin-top: 6px;
+  font-size: 15px;
+  color: #d7e2ff;
+}

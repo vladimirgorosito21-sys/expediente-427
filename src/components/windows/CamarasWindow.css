@@ -1,0 +1,139 @@
+/* Coordenadas relativas al cuerpo de la ventana (la barra de título mide 36px) */
+.cams {
+  position: absolute;
+  inset: 0;
+  font-family: var(--font-pixel);
+  color: var(--ink);
+}
+
+.cams__toolbar {
+  position: absolute;
+  left: 21px;
+  top: 10px;
+  width: 975.6px;
+  height: 87.6px;
+  background: var(--paper-dark);
+  border-radius: 1px;
+  padding: 10px 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 15px;
+}
+.cams__buttons {
+  display: flex;
+  gap: 22px;
+  align-items: center;
+  color: #6f6f6f;
+}
+.cams__sep {
+  width: 1px;
+  height: 18px;
+  background: #8f8f8f;
+}
+.cams__address {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.cams__field {
+  flex: 1;
+  height: 28px;
+  line-height: 28px;
+  padding: 0 10px;
+  background: var(--paper);
+  color: var(--ink-strong);
+}
+.cams__status {
+  color: #6f6f6f;
+  font-size: 13px;
+}
+
+.cams__side {
+  position: absolute;
+  left: 21px;
+  top: 110px;
+  width: 189px;
+  height: 547.4px;
+  background: var(--paper-dark);
+  border-radius: 1px;
+}
+.cams__group {
+  position: absolute;
+  left: 25px;
+  font-size: 13px;
+  color: #6f6f6f;
+  letter-spacing: 0.65px;
+  text-transform: uppercase;
+}
+.cams__item {
+  position: absolute;
+  left: 24.75px;
+  width: 133.4px;
+  height: 25.6px;
+  border: 0;
+  padding: 0 8px;
+  background: var(--paper);
+  font-family: var(--font-pixel);
+  font-size: 12.5px;
+  text-align: left;
+  color: var(--ink-strong);
+  white-space: nowrap;
+  overflow: hidden;
+}
+.cams__item:hover {
+  background: #e6e6e6;
+}
+.cams__item.is-active {
+  background: var(--gold);
+  color: #4d3a0f;
+}
+
+.cams__main {
+  position: absolute;
+  left: 219.5px;
+  top: 106.7px;
+  width: 771.6px;
+  height: 550.6px;
+  background: var(--paper-dark);
+  border-radius: 20px 20px 0 0;
+}
+
+.cams__thumb {
+  position: absolute;
+  width: 126.3px;
+  height: 124px;
+  padding: 0;
+  border: 0;
+  background: var(--paper);
+  outline: 3px solid var(--paper);
+}
+.cams__thumb:hover,
+.cams__thumb.is-active {
+  outline-color: var(--gold);
+}
+.cams__thumb-label {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -22px;
+  font-size: 13px;
+  color: var(--ink);
+}
+
+.cams__viewer {
+  position: absolute;
+  left: 287px;
+  width: 586.8px;
+  height: 350px;
+  background: var(--paper);
+  outline: 3px solid var(--paper);
+}
+.cams__empty {
+  margin: 0;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  font-size: 16px;
+  color: #6f6f6f;
+}

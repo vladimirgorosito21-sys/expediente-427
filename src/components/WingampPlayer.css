@@ -1,0 +1,214 @@
+/* Carcasa: "Rectangle 340" (296 × 261) en (1108, 259) */
+.wingamp {
+  position: absolute;
+  left: 1108px;
+  top: 259px;
+  width: 296px;
+  height: 261px;
+  z-index: 3;
+  border-radius: 17px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.35) 0, rgba(255, 255, 255, 0) 40%),
+    var(--player-shell);
+  box-shadow:
+    inset 0 -6px 3.3px rgba(0, 0, 0, 0.25),
+    inset 4px 4px 0 rgba(255, 255, 255, 0.25),
+    0 3px 10.1px rgba(0, 0, 0, 0.25);
+}
+
+.wingamp__bar {
+  position: absolute;
+  left: 18px;
+  right: 16px;
+  top: 8px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.wingamp__logo {
+  font-family: var(--font-pixel);
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 3px;
+  color: #2c5a87;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.6);
+}
+.wingamp__dots {
+  display: flex;
+  gap: 4px;
+}
+.wingamp__dots i {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #d8ecff;
+  box-shadow: inset -1px -1px 0 rgba(0, 0, 0, 0.25);
+}
+
+/* Pantalla: "Rectangle 341" (256 × 177) en (1131, 290) */
+.wingamp__screen {
+  position: absolute;
+  left: 23px;
+  top: 31px;
+  width: 256px;
+  height: 177px;
+  border-radius: 18px;
+  overflow: hidden;
+  background: var(--player-screen);
+  box-shadow: inset -4px 3px 4px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+}
+
+.lcd {
+  position: relative;
+  flex: 0 0 97px;
+  background: linear-gradient(180deg, #0b130c, #050805);
+  padding: 8px 12px 6px;
+  font-family: var(--font-pixel);
+  color: #34f05a;
+  text-shadow: 0 0 5px rgba(52, 240, 90, 0.55);
+  box-shadow: inset 0 0 0 1px #1d2b1e, inset 0 -2px 0 #2a3b2b;
+}
+.lcd__row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.lcd__state {
+  font-size: 13px;
+  width: 16px;
+}
+.lcd__time {
+  font-size: 26px;
+  line-height: 1;
+  letter-spacing: 2px;
+}
+.lcd__meta {
+  margin-left: auto;
+  font-size: 9px;
+  line-height: 1.25;
+  text-align: right;
+  color: #a7f0b4;
+  opacity: 0.85;
+}
+.lcd__marquee {
+  margin-top: 6px;
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 11px;
+  letter-spacing: 0.5px;
+  color: #ffd65c;
+  text-shadow: 0 0 4px rgba(255, 214, 92, 0.5);
+}
+.lcd__marquee span {
+  display: inline-block;
+}
+.lcd__marquee span.is-moving {
+  animation: marquee 12s linear infinite;
+}
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.lcd__eq {
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  bottom: 6px;
+  height: 22px;
+  display: flex;
+  align-items: flex-end;
+  gap: 2px;
+}
+.lcd__eq i {
+  flex: 1;
+  height: 3px;
+  background: linear-gradient(0deg, #2bd94c 0%, #d9f23a 60%, #ff5a2a 100%);
+  background-size: 100% 22px;
+  background-position: bottom;
+}
+.lcd__eq.is-playing i {
+  animation: eq ease-in-out infinite alternate;
+}
+@keyframes eq {
+  0% { height: 3px; }
+  50% { height: 16px; }
+  100% { height: 8px; }
+}
+
+.wingamp__embed {
+  flex: 0 0 80px;
+  height: 80px;
+  background: #121212;
+}
+.wingamp__embed iframe {
+  display: block;
+  border: 0;
+}
+.wingamp__embed--fallback {
+  border: 0;
+  display: block;
+}
+
+/* Controles: "coolicons:play-pause-fill" (26px en 1134, 478) y "Vector 447" (1181, 491) */
+.wingamp__play {
+  position: absolute;
+  left: 26px;
+  top: 219px;
+  width: 26px;
+  height: 26px;
+  padding: 0;
+  border: 0;
+  background: none;
+  filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.3));
+}
+.wingamp__play:hover:not(:disabled) {
+  transform: scale(1.1);
+}
+.wingamp__play:disabled {
+  opacity: 0.55;
+  cursor: default;
+}
+.wingamp__play[aria-pressed='true'] img {
+  filter: drop-shadow(0 0 3px #fff);
+}
+.wingamp__seek {
+  position: absolute;
+  left: 73px;
+  top: 222px;
+  width: 196px;
+  height: 20px;
+  cursor: pointer;
+}
+.wingamp__seek:focus-visible {
+  outline: 1px dotted #2c5a87;
+}
+.wingamp__track {
+  position: absolute;
+  left: 0;
+  top: 7px;
+  width: 196px;
+  height: 6px;
+  filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.2));
+}
+.wingamp__fill {
+  position: absolute;
+  left: 0;
+  top: 7px;
+  height: 6px;
+  max-width: 193px;
+  border-radius: 3px;
+  background: #2c5a87;
+}
+.wingamp__knob {
+  position: absolute;
+  top: 3px;
+  width: 14px;
+  height: 14px;
+  margin-left: -7px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.35);
+}

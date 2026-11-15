@@ -1,0 +1,37 @@
+.viewport {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  background: radial-gradient(ellipse at center, #10192d 0%, #05070d 75%);
+}
+
+.stage {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1440px;
+  height: 1024px;
+  transform-origin: 0 0;
+  overflow: hidden;
+  background: #000;
+}
+
+.rotate-hint {
+  position: fixed;
+  left: 16px;
+  right: 16px;
+  bottom: 16px;
+  z-index: 99999;
+  background: #ffffe1;
+  border: 1px solid #000;
+  border-radius: 10px;
+  padding: 14px 16px;
+  font-family: var(--font-sans);
+  font-size: 15px;
+  line-height: 1.35;
+  color: #222;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+.rotate-hint p {
+  margin: 0 0 10px;
+}

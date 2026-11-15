@@ -1,0 +1,32 @@
+.manual {
+  height: 1999px;
+}
+.manual > * {
+  position: absolute;
+  left: 91px;
+  width: 965px;
+}
+.manual > .doc__title,
+.manual > .doc__subtitle {
+  left: 0;
+  width: 100%;
+}
+.manual > .doc__h {
+  width: auto;
+}
+.manual__block p {
+  margin: 0;
+}
+.manual__block--tight p,
+.manual__block--tight li {
+  line-height: 1.0679;
+}
+.manual__block ul {
+  margin: 0;
+  padding-left: 33px;
+  list-style: disc;
+}
+.manual__block li {
+  font-size: 22px;
+  padding-left: 0;
+}

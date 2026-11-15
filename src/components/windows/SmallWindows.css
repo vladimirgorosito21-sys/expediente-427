@@ -1,0 +1,110 @@
+.small {
+  position: absolute;
+  inset: 14px 18px 18px;
+  font-family: var(--font-pixel);
+  color: var(--ink-strong);
+}
+.small__status {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin: 0;
+  font-size: 13px;
+  color: #6f6f6f;
+}
+
+/* Papelera */
+.trash {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--paper-dark);
+  font-size: 15px;
+}
+.trash th {
+  text-align: left;
+  font-weight: 600;
+  padding: 8px 12px;
+  background: #cfcfcf;
+  color: var(--ink);
+  box-shadow: inset -1px -1px 0 #9a9a9a;
+}
+.trash td {
+  padding: 9px 12px;
+}
+.trash tbody tr {
+  cursor: default;
+}
+.trash tbody tr:hover,
+.trash tbody tr:focus {
+  background: var(--gold);
+  outline: none;
+}
+
+/* La Interweb */
+.web {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.web__bar,
+.web__address {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 8px 12px;
+  background: var(--paper-dark);
+  font-size: 15px;
+  color: #6f6f6f;
+}
+.web__btn {
+  border: 0;
+  background: none;
+  padding: 0;
+  font-family: var(--font-pixel);
+  font-size: 15px;
+  color: var(--ink-strong);
+}
+.web__btn:hover {
+  text-decoration: underline;
+}
+.web__field {
+  flex: 1;
+  background: var(--paper);
+  padding: 4px 10px;
+  color: var(--ink-strong);
+}
+.web__page {
+  flex: 1;
+  background: #fff;
+  padding: 26px 36px;
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.45;
+  color: #222;
+  overflow: auto;
+  animation: fade 0.25s ease-out;
+}
+.web__page h3 {
+  margin: 0 0 14px;
+  font-size: 24px;
+  color: #1f3f8a;
+  border-bottom: 2px solid #c7d3ef;
+  padding-bottom: 8px;
+}
+.web__page p {
+  margin: 10px 0 4px;
+}
+.web__page ul {
+  margin: 0;
+}
+.web__code {
+  margin-top: 26px !important;
+  font-size: 13px;
+  color: #888;
+}
+
+/* Créditos */
+.credits-win {
+  overflow-y: auto;
+  padding-right: 10px;
+}

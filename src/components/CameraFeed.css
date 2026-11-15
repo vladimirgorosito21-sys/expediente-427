@@ -1,0 +1,70 @@
+.feed {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #0e1510;
+  font-family: var(--font-pixel);
+  color: #cfe9d6;
+}
+.feed__scene,
+.feed__video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: contrast(1.1);
+}
+.feed__monitor {
+  animation: monitor 2.4s ease-in-out infinite;
+}
+@keyframes monitor {
+  50% { fill: #7fc392; }
+}
+
+.feed__noise {
+  position: absolute;
+  inset: -20px;
+  opacity: 0.22;
+  mix-blend-mode: screen;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  animation: noise 0.5s steps(5) infinite;
+}
+@keyframes noise {
+  0% { transform: translate(0, 0); }
+  20% { transform: translate(-12px, 6px); }
+  40% { transform: translate(8px, -10px); }
+  60% { transform: translate(-6px, 12px); }
+  80% { transform: translate(10px, 4px); }
+}
+.feed__scan {
+  position: absolute;
+  inset: 0;
+  background:
+    repeating-linear-gradient(to bottom, rgba(0, 0, 0, 0.28) 0 1px, transparent 1px 3px),
+    radial-gradient(ellipse at center, transparent 55%, rgba(0, 0, 0, 0.55) 100%);
+}
+
+.feed__hud {
+  position: absolute;
+  inset: 6px 8px;
+  font-size: 11px;
+  letter-spacing: 0.5px;
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.9);
+}
+.feed__hud > span {
+  position: absolute;
+}
+.feed__hud > span:first-child:not(.feed__rec) { left: 0; top: 0; }
+.feed__rec { right: 0; top: 0; color: #ff5b5b; animation: rec 1.2s steps(2) infinite; }
+.feed__time { left: 0; bottom: 0; }
+.feed__name { left: 0; top: 20px; }
+.feed__occ { right: 0; bottom: 0; }
+@keyframes rec { 50% { opacity: 0; } }
+
+.feed--big .feed__hud {
+  inset: 12px 16px;
+  font-size: 17px;
+}
+.feed--big .feed__name { top: 26px; }

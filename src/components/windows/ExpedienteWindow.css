@@ -1,0 +1,45 @@
+.exp {
+  padding: 74px 91px 120px;
+}
+.exp > .doc__subtitle {
+  margin-top: 10px;
+  font-size: 19px;
+}
+.exp__bar {
+  margin: 24px 0 40px;
+}
+.exp > .doc__h {
+  margin-top: 44px;
+}
+.exp > .doc__rule {
+  margin: 12px 0 22px;
+}
+.exp > p + p {
+  margin-top: 14px;
+}
+.exp__last {
+  font-weight: 700;
+  font-size: 26px !important;
+  margin-top: 26px !important;
+  color: #1d1d1d;
+}
+.exp__sign {
+  margin-top: 60px !important;
+  font-style: italic;
+  font-size: 18px !important;
+  text-align: right;
+}
+.exp__stamp {
+  position: absolute;
+  top: 120px;
+  right: 70px;
+  padding: 6px 18px;
+  border: 5px solid rgba(178, 34, 34, 0.75);
+  border-radius: 6px;
+  color: rgba(178, 34, 34, 0.75);
+  font-weight: 700;
+  font-size: 34px;
+  letter-spacing: 4px;
+  transform: rotate(12deg);
+  pointer-events: none;
+}

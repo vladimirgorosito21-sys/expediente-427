@@ -1,0 +1,116 @@
+.desktop {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  background: #5b87d6;
+  user-select: none;
+}
+
+/* Imagen 1536 × 1024 en x = -96, espejada (escala -1 en X) */
+.desktop__wall {
+  position: absolute;
+  left: -96px;
+  top: 0;
+  width: 1536px;
+  height: 1024px;
+  object-fit: cover;
+  transform: scaleX(-1);
+  pointer-events: none;
+}
+
+.desktop__logo {
+  position: absolute;
+  left: 1141px;
+  top: 51px;
+  width: 229px;
+  height: 133px;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: default;
+}
+.desktop__logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.desktop__exp {
+  position: absolute;
+  left: 1133px;
+  top: 191px;
+  width: 265px;
+  margin: 0;
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 17px;
+  color: #fff;
+  white-space: nowrap;
+}
+
+/* "Usted está aquí" rotado -10.05° dentro de una caja de 186.7 × 57.9 en (667, 245) */
+.desktop__here {
+  position: absolute;
+  left: 667px;
+  top: 245px;
+  width: 186.698px;
+  height: 57.899px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+.desktop__here span {
+  transform: rotate(-10.05deg);
+  font-family: var(--font-hand);
+  font-size: 25px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--yellow-note);
+  white-space: nowrap;
+}
+.desktop__arrow {
+  position: absolute;
+  left: 768.48px;
+  top: 290px;
+  width: 107.019px;
+  height: 193.52px;
+  pointer-events: none;
+}
+
+/* "ACTIVAR WINGOWS" + leyenda, por encima del velo (z 6001) */
+.desktop__watermark {
+  position: absolute;
+  left: 960px;
+  top: 842px;
+  width: 436px;
+  height: 90px;
+  z-index: 50;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: default;
+  font-family: var(--font-sans);
+  color: #fff;
+  text-align: right;
+  opacity: 0.35;
+}
+.desktop__watermark.is-over {
+  z-index: 6001;
+}
+.desktop__wm-title {
+  position: absolute;
+  left: 191px;
+  top: 0;
+  font-weight: 700;
+  font-size: 25px;
+  white-space: nowrap;
+}
+.desktop__wm-sub {
+  position: absolute;
+  right: 1px;
+  top: 36px;
+  font-style: italic;
+  font-size: 21px;
+  line-height: normal;
+  white-space: nowrap;
+}
