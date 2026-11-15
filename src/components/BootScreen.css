@@ -163,6 +163,9 @@
   flex: 1;
   padding: 0 60px;
 }
+.login__license {
+  margin-right: auto !important;
+}
 .login__user {
   display: flex;
   align-items: center;

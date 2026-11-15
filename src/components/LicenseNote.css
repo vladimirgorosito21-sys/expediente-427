@@ -1,0 +1,28 @@
+.license-note {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: 15px;
+  color: inherit;
+}
+.license-note a {
+  color: inherit;
+  text-decoration: underline;
+}
+.license-note__badge {
+  display: inline-flex;
+  gap: 2px;
+}
+.license-note__badge span {
+  display: grid;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+  border: 2px solid currentColor;
+  border-radius: 50%;
+  font-weight: 700;
+  font-size: 10px;
+  text-transform: uppercase;
+}

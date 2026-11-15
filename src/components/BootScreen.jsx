@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import wingowsLogo from '../assets/desktop/wingows-logo.svg'
 import photo427 from '../assets/staff/empleado427.jpg'
+import LicenseNote from './LicenseNote'
 import './BootScreen.css'
 
 const QUOTE =
@@ -94,6 +95,7 @@ export default function BootScreen({ onDone }) {
         </div>
       </div>
       <div className="login__bottom">
+        <LicenseNote className="login__license" />
         <span>Recomendado: pantalla completa y con sonido.</span>
         <button className="w-btn" onClick={fullscreen}>
           Pantalla completa

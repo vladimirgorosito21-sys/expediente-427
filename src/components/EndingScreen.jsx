@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import CreditsContent from './CreditsContent'
 import { INSTAGRAM_URL, INSTAGRAM_HANDLE, STEAM_URL } from '../links'
+import LicenseNote from './LicenseNote'
 import './EndingScreen.css'
 
 const ENDINGS = {
@@ -74,6 +75,7 @@ export default function EndingScreen({ kind, onRestart }) {
           </div>
         </div>
       )}
+      <LicenseNote className="ending__license" />
     </div>
   )
 }

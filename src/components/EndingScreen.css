@@ -75,6 +75,13 @@
 .ending__actions a {
   text-decoration: none;
 }
+.ending__license {
+  position: absolute;
+  left: 50%;
+  bottom: 36px;
+  transform: translateX(-50%);
+  color: #777;
+}
 .ending__credits {
   width: 900px;
   max-height: 900px;

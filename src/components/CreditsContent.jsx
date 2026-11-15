@@ -1,4 +1,4 @@
-import { INSTAGRAM_URL, INSTAGRAM_HANDLE } from '../links'
+import { INSTAGRAM_URL, INSTAGRAM_HANDLE, LICENSE_URL } from '../links'
 import './CreditsContent.css'
 
 const TEAM = [
@@ -55,8 +55,8 @@ export default function CreditsContent() {
 
       <h4>Licencia</h4>
       <p>
-        Esta obra se publica bajo licencia{' '}
-        <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.es" target="_blank" rel="noreferrer">
+        © 2026 Vladimir Gorosito. Esta obra (contenido y código fuente) se publica bajo licencia{' '}
+        <a href={LICENSE_URL} target="_blank" rel="noreferrer license">
           Creative Commons Atribución-CompartirIgual 4.0 (CC BY-SA 4.0)
         </a>
         . Los elementos de terceros conservan sus licencias originales.

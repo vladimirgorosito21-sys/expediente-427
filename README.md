@@ -38,7 +38,13 @@ Para saltar la intro durante las pruebas: `http://localhost:5173/?escritorio`
 
 ## Licencia
 
-Contenido original publicado bajo [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.es).
+© 2026 Vladimir Gorosito. Todo el proyecto (contenido original y código fuente) se publica bajo
+[Creative Commons Atribución-CompartirIgual 4.0 Internacional (CC BY-SA 4.0)](https://creativecommons.org/licenses/by-sa/4.0/deed.es).
+El texto legal completo está en [`LICENSE`](LICENSE).
+
+Se puede compartir y adaptar libremente, citando la autoría e indicando si se hicieron cambios. Las obras
+derivadas tienen que publicarse con la misma licencia.
+
 *The Stanley Parable*, su logotipo y su universo pertenecen a sus autores (Davey Wreden, William Pugh,
 Galactic Cafe / Crows Crows Crows) y se usan con fines académicos. Los recursos de terceros (íconos,
 tipografías, música) conservan sus licencias; el detalle está en la sección de créditos del sitio.
