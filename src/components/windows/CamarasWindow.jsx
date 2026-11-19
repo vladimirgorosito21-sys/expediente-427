@@ -3,13 +3,12 @@ import Window from '../Window'
 import CameraFeed from '../CameraFeed'
 import './CamarasWindow.css'
 
-// Para usar las piezas audiovisuales del equipo: poner el video en src/assets/video/
-// e importarlo, por ejemplo: import cam01 from '../../assets/video/cam01.mp4'
-// y agregar `video: cam01` a la cámara correspondiente.
+// Piezas audiovisuales: `youtube` es el ID del video (lo que va después de "watch?v=").
+// Las cámaras sin `youtube` muestran la transmisión simulada.
 const CAMS = [
-  { id: '01', short: 'Oficinas', name: 'Oficinas · Planta principal', scene: 'office', occupancy: 0 },
-  { id: '02', short: 'Reuniones', name: 'Sala de reuniones B', scene: 'meeting', occupancy: 0 },
-  { id: '03', short: 'Descanso', name: 'Sala de descanso', scene: 'break', occupancy: 0 },
+  { id: '01', short: 'Oficinas', name: 'Oficinas · Planta principal', scene: 'office', occupancy: 0, youtube: 'UXLvcnxCXDM' },
+  { id: '02', short: 'Reuniones', name: 'Sala de reuniones B', scene: 'meeting', occupancy: 0, youtube: '8xrJ5swjD4Y' },
+  { id: '03', short: 'Descanso', name: 'Sala de descanso', scene: 'break', occupancy: 0, youtube: 'JL80NIw0I2Q' },
   { id: '04', short: 'Jefatura', name: 'Oficina de jefatura', scene: 'boss', occupancy: 0 },
   { id: '05', short: 'Of. 427', name: 'Oficina 427', scene: '427', occupancy: 1 },
 ]

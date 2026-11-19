@@ -99,21 +99,49 @@ function useTicker() {
   return s
 }
 
+const ytEmbed = (id) =>
+  `https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0&modestbranding=1&playsinline=1`
+
 /**
- * Transmisión de cámara simulada. Si se pasa `video`, se reproduce ese archivo
- * (para reemplazar por las piezas audiovisuales del equipo).
+ * Transmisión de cámara. Con `cam.youtube`, la vista grande incrusta el video de YouTube
+ * y la miniatura usa su portada; sin él, se dibuja la escena simulada.
  */
 export default function CameraFeed({ cam, big = false }) {
   const sec = useTicker()
+
+  if (cam.youtube && big) {
+    return (
+      <div className="feed feed--video">
+        <iframe
+          className="feed__yt"
+          src={ytEmbed(cam.youtube)}
+          title={`CAM ${cam.id} · ${cam.name}`}
+          allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
+          referrerPolicy="strict-origin-when-cross-origin"
+          allowFullScreen
+        />
+      </div>
+    )
+  }
+
+  if (cam.youtube) {
+    return (
+      <div className="feed">
+        <img className="feed__scene feed__thumb" src={`https://i.ytimg.com/vi/${cam.youtube}/hqdefault.jpg`} alt="" loading="lazy" />
+        <div className="feed__scan" aria-hidden />
+        <div className="feed__hud">
+          <span className="feed__rec">● REC</span>
+          <span className="feed__play" aria-hidden>▶</span>
+        </div>
+      </div>
+    )
+  }
+
   return (
     <div className={`feed ${big ? 'feed--big' : ''}`}>
-      {cam.video ? (
-        <video className="feed__video" src={cam.video} autoPlay muted loop playsInline />
-      ) : (
-        <svg className="feed__scene" viewBox="0 0 320 200" preserveAspectRatio="xMidYMid slice" aria-hidden>
-          {SCENES[cam.scene]}
-        </svg>
-      )}
+      <svg className="feed__scene" viewBox="0 0 320 200" preserveAspectRatio="xMidYMid slice" aria-hidden>
+        {SCENES[cam.scene]}
+      </svg>
       <div className="feed__noise" aria-hidden />
       <div className="feed__scan" aria-hidden />
       <div className="feed__hud">
